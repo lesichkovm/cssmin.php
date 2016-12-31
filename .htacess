@@ -1,2 +1,5 @@
-RewriteCond %{REQUEST_URI} \.(eot|otf|svg|ttf|woff|woff2)$ [NC]      # If is not a font
+# If is not a font
+RewriteCond %{REQUEST_URI} \.(eot|otf|svg|ttf|woff|woff2)$ [NC]
 RewriteRule cssmin/(.+)$ /$1 [L,QSA]
+
+RewriteRule cssmin/(.*)$ cssmin.php?path=$1 [L]
