@@ -1,0 +1,2 @@
+RewriteCond %{REQUEST_URI} \.(eot|otf|svg|ttf|woff|woff2)$ [NC]      # If is not a font
+RewriteRule cssmin/(.+)$ /$1 [L,QSA]
